@@ -1,0 +1,25 @@
+name: advanced-screenshot-agent-ci
+
+on:
+  push:
+    paths:
+      - "advanced-screenshot-agent/**"
+  pull_request:
+    paths:
+      - "advanced-screenshot-agent/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: advanced-screenshot-agent
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e ".[dev]"
+      - run: ruff check .
+      - run: pytest

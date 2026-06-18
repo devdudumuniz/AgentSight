@@ -1,0 +1,14 @@
+pillow>=10.0.0
+mss>=9.0.0
+cryptography>=42.0.0
+
+[dev]
+pytest>=8.0.0
+ruff>=0.6.0
+mypy>=1.10.0
+
+[ocr]
+pytesseract>=0.3.13
+
+[vision]
+opencv-python>=4.10.0
