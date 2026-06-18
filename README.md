@@ -24,7 +24,7 @@ As soluções atuais normalmente fazem apenas screenshot + análise visual. Este
 ## Estrutura
 
 ```text
-advanced-screenshot-agent/
+.
 ├── advanced_screenshot_agent/
 │   ├── __init__.py
 │   ├── capture.py
@@ -56,7 +56,6 @@ advanced-screenshot-agent/
 ## Uso local
 
 ```bash
-cd advanced-screenshot-agent
 python -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
@@ -68,7 +67,6 @@ screenshot-agent report --run .vision-runs/demo
 No Windows:
 
 ```powershell
-cd advanced-screenshot-agent
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e ".[dev]"

@@ -1,3 +1,6 @@
+import subprocess
+import sys
+
 import pytest
 
 from advanced_screenshot_agent.capture import CaptureConfig, capture_screen
@@ -23,3 +26,15 @@ def test_window_title_without_region_not_implemented(tmp_path):
 
     with pytest.raises(NotImplementedError):
         capture_screen(config, policy)
+
+
+def test_cli_module_help_executes():
+    result = subprocess.run(
+        [sys.executable, "-m", "advanced_screenshot_agent.cli", "--help"],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+    assert result.returncode == 0
+    assert "usage: screenshot-agent" in result.stdout

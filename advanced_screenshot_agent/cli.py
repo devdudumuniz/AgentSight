@@ -49,3 +49,7 @@ def main() -> None:
                 print(f"- Timestamp UTC: `{data['timestamp_utc']}`")
                 print(f"\n![{data.get('label', item.stem)}]({Path(data['path']).name})\n")
         return
+
+
+if __name__ == "__main__":
+    main()

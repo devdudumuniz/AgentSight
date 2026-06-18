@@ -1,0 +1,48 @@
+{
+  "contextVersion": "1.0.0",
+  "lastUpdated": "2026-06-18T00:00:00Z",
+  "currentPath": ".github/context/current",
+  "requiredReadOrder": [
+    "manifest.json",
+    "project-brief.md",
+    "architecture-map.md",
+    "entrypoints.md",
+    "module-index.md",
+    "dependency-map.md",
+    "operations-map.md",
+    "decisions/ADR-0001-context-structure.md",
+    "decisions/ADR-0002-agent-loading-order.md"
+  ],
+  "requiredFiles": [
+    ".github/context/changelog.md",
+    ".github/agents/main.agent.md",
+    ".github/skills/README.md",
+    ".github/prompts/README.md",
+    ".github/context/current/sources/README.md"
+  ],
+  "profiles": [
+    "architect",
+    "operator"
+  ],
+  "domains": [
+    "security",
+    "agent-runtime"
+  ],
+  "modules": [
+    "capture",
+    "policy",
+    "evidence",
+    "redaction"
+  ],
+  "sourcesEnabled": true,
+  "sourcesRegistry": [
+    "docs/architecture.md",
+    "docs/privacy-threat-model.md",
+    "docs/roadmap.md",
+    "docs/codex-continuation-prompt.md",
+    "docs/full-research-report.md",
+    "README.md"
+  ],
+  "integrityStatus": "ACTIVE"
+}
+
