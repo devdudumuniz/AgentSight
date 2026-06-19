@@ -3,9 +3,9 @@
 - titulo: Configuração do pacote Python
 - tipo: Código/config
 - localizacao: `pyproject.toml`
-- resumo executivo: Define build backend, metadados do pacote, dependencias, extras de desenvolvimento, entrypoint `screenshot-agent`, ruff e pytest.
+- resumo executivo: Define build backend, metadados do pacote, dependencias, extras de desenvolvimento, entrypoint `agentsight`, ruff e pytest.
 - conceitos-chave: setuptools, pacote editavel, CLI entrypoint, pytest, ruff, mypy.
-- pontos críticos: `requires-python >=3.10`; `screenshot-agent = advanced_screenshot_agent.cli:main`.
+- pontos críticos: `requires-python >=3.10`; `agentsight = agentsight.cli:main`.
 - riscos: mypy esta em `dev`, mas ainda nao e gate obrigatorio no CI.
 - relacao com o projeto: fonte primaria para instalar, testar e empacotar o AgentSight.
 - modulos afetados: package, CLI, QA.

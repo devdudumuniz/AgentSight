@@ -9,4 +9,3 @@ type: Documentation
 - riscos: gaps de rastreabilidade entre fases e decisões de implementação no código.
 - módulos: arquitetura geral de produto
 - limitações: plano sem milestones de entrega operacional no CI.
-

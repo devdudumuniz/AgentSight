@@ -11,8 +11,8 @@ python -m pip install -e ".[dev]"
 ```powershell
 ruff check .
 python -m pytest
-python -m advanced_screenshot_agent.cli --help
-screenshot-agent --help
+python -m agentsight.cli --help
+agentsight --help
 ```
 
 ## Contexto

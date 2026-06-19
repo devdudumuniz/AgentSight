@@ -4,7 +4,7 @@
 Captura imagem, aplica redaction regional quando informada e gera metadados (`label`, `sha256`, `timestamp`, `path`, backend usado, redaction aplicada).
 
 ## Entrada principal
-- `advanced_screenshot_agent.capture.capture_screen`
+- `agentsight.capture.capture_screen`
 
 ## Dependências
 - `PIL`, `mss`

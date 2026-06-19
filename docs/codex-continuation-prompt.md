@@ -1,5 +1,5 @@
 ```text
-Você está continuando o desenvolvimento do projeto advanced-screenshot-agent.
+Você está continuando o desenvolvimento do projeto agentsight.
 
 Objetivo:
 Transformar a base inicial em uma ferramenta open source de alto nível para dar visão segura a agentes de IA, superando fluxos simples de screenshot usados por Codex, Claude Code, Cursor e similares.
@@ -47,8 +47,8 @@ Validação mínima antes de finalizar:
 - python -m pip install -e ".[dev]"
 - ruff check .
 - pytest
-- python -m advanced_screenshot_agent.cli --help
-- screenshot-agent --help
+- python -m agentsight.cli --help
+- agentsight --help
 
 Entrega esperada:
 - Código funcional.

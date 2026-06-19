@@ -1,7 +1,7 @@
 {
-  "contextVersion": "1.1.0",
-  "lastUpdated": "2026-06-19T11:10:06Z",
-  "projectSlug": "advanced-screenshot-agent",
+  "contextVersion": "1.2.0",
+  "lastUpdated": "2026-06-19T11:45:00Z",
+  "projectSlug": "agentsight",
   "projectAlias": "AgentSight",
   "currentPath": ".github/context/current",
   "agent": ".github/agents/main.agent.md",
@@ -176,6 +176,7 @@
     "docs/codex-continuation-prompt.md",
     "pyproject.toml",
     ".github/workflows/ci.yml",
+    "agentsight/",
     "advanced_screenshot_agent/",
     "tests/"
   ],

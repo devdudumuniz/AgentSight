@@ -6,4 +6,3 @@
 
 ## Ação recomendada
 - Registrar estratégia de release e publicação de pacote em `roadmap/milestones.md`.
-

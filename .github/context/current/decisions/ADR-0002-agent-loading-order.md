@@ -13,4 +13,3 @@ Definir ordem de leitura explícita no `main.agent.md`, priorizando:
 ## Consequências
 - Respostas mais previsíveis.
 - Menos inferência não rastreável.
-

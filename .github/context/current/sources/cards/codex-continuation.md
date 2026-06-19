@@ -8,4 +8,3 @@ type: Operational
 - conceitos-chave: Playwright, redaction local, retention, CLI expandida, release criteria.
 - decisões: validações mínimas citadas e regra de não mock.
 - limitações: não é decisão arquitetônica formal, mas diretriz operacional.
-

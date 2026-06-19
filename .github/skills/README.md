@@ -10,7 +10,7 @@ Skills ativas reutilizáveis do projeto.
 
 ## Skills disponíveis
 
-- `advanced-screenshot-agent/`: visão operacional e captura de evidências visuais.
+- `agentsight/`: visão operacional e captura de evidências visuais.
 - `context-refresh/`: atualização controlada da memória ativa.
 - `context-audit/`: auditoria da estrutura `.github`.
 - `source-deep-dive/`: aprofundamento com fontes reais.

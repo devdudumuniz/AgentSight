@@ -14,4 +14,3 @@
 
 ## Dependências de automação
 - `.github/workflows/ci.yml` (CI)
-

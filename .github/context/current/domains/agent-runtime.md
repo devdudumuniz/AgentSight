@@ -9,7 +9,6 @@ Oferecer uma interface estável para agentes consumirem evidência visual.
 - Adapters web ainda são mínimos e dependem de integração futura.
 
 ## Fontes
-- `advanced_screenshot_agent/capture.py`
-- `advanced_screenshot_agent/cli.py`
-- `advanced_screenshot_agent/adapters/playwright.py`
-
+- `agentsight/capture.py`
+- `agentsight/cli.py`
+- `agentsight/adapters/playwright.py`

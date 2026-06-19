@@ -6,7 +6,7 @@ Evoluir codigo, CLI e documentacao mantendo compatibilidade com o pacote Python 
 
 ## Foco atual
 
-- `advanced_screenshot_agent/`
+- `agentsight/`
 - `tests/`
 - `README.md`
 - `docs/`

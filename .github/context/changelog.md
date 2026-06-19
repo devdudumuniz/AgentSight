@@ -1,5 +1,13 @@
 # Changelog de contexto
 
+## 2026-06-19 - AgentSight v0.1 runtime
+- Produto renomeado consistentemente para AgentSight.
+- Pacote Python primario migrado para `agentsight`; `advanced_screenshot_agent` ficou apenas como shim legado com `DeprecationWarning`.
+- CLI principal migrado para `agentsight`; `screenshot-agent` mantido como alias temporario.
+- Runtime minimo ampliado com policy, adapter mss sem placeholder automatico, capture, redaction, evidence store, report, cleanup, annotate, doctor e adapters Playwright.
+- CI atualizado para `agentsight-ci` com Python 3.10/3.11/3.12, lint, testes, build e smoke de CLI.
+- README, docs, skill e exemplos publicos atualizados para posicionar AgentSight como secure vision layer para agentes.
+
 ## 2026-06-19 - redaction integrada
 - `capture` passou a suportar `--region`, `--redact-region` e `--no-redact`.
 - Redaction regional agora e aplicada em memoria antes de salvar a imagem final quando regioes sao informadas.
@@ -36,13 +44,13 @@
   - removido agente legado `./.github/zuza-code-orchestrator.agent.md`, mantendo apenas `main.agent.md` como executável;
   - corrigidos caminhos de fonte de `topics/privacy.md` para `topics/security.md`;
   - alinhados `README.md`, workflow de CI e entrypoint do módulo CLI ao root real do repositório;
-  - adicionada regressão para `python -m advanced_screenshot_agent.cli --help`;
+  - adicionada regressão para `python -m agentsight.cli --help`;
   - validação executada com sucesso:
     - `python -m pip install -e ".[dev]"`;
     - `ruff check .`;
     - `python -m pytest` (`10 passed`);
-  - `python -m advanced_screenshot_agent.cli --help`;
-  - `screenshot-agent --help`;
+  - `python -m agentsight.cli --help`;
+  - `agentsight --help`;
   - `.github/scripts/context/validate-context.ps1`;
   - `.github/scripts/context/validate-context.sh` via Git Bash.
 - Snapshot de revisão final criado em `.github/context/archive/snapshots/20260618T190930Z`.

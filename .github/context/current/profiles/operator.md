@@ -7,4 +7,3 @@ Uso:
 Referências:
 - `.github/prompts/check-gates.prompt.md`
 - `.github/context/current/runbooks/build.md`
-

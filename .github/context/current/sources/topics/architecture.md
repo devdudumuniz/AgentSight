@@ -5,12 +5,12 @@ Camada de captura segura separada por política, captura, evidência e redaction
 
 ## Fontes relacionadas
 - `docs/architecture.md`
-- `advanced_screenshot_agent/cli.py`
-- `advanced_screenshot_agent/capture.py`
-- `advanced_screenshot_agent/policy.py`
-- `advanced_screenshot_agent/evidence.py`
-- `advanced_screenshot_agent/redact.py`
-- `advanced_screenshot_agent/adapters/playwright.py`
+- `agentsight/cli.py`
+- `agentsight/capture.py`
+- `agentsight/policy.py`
+- `agentsight/evidence.py`
+- `agentsight/redact.py`
+- `agentsight/adapters/playwright.py`
 
 ## Fatos confirmados
 - Estrutura monobloco simples sem serviços externos.

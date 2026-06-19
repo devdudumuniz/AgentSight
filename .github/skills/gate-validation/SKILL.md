@@ -8,8 +8,8 @@ Use antes de declarar qualquer entrega concluida.
 python -m pip install -e ".[dev]"
 ruff check .
 python -m pytest
-python -m advanced_screenshot_agent.cli --help
-screenshot-agent --help
+python -m agentsight.cli --help
+agentsight --help
 .github/scripts/context/validate-context.ps1
 ```
 

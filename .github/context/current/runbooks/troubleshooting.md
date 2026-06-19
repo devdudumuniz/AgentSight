@@ -1,13 +1,12 @@
 # Runbook: Troubleshooting
 
-## Falha comum: CI com erro de caminho
-- Sintoma: workflow falha por `working-directory` inexistente.
-- Ação: validar e corrigir `ci.yml` para raiz atual.
+## Falha comum: CI falhando
+- Sintoma: workflow falha em lint, testes, build ou smoke do CLI.
+- Acao: validar `.github/workflows/ci.yml`, matriz Python e instalacao `.[dev,capture]`.
 
-## Falha comum: captura bloqueada por política
+## Falha comum: captura bloqueada por politica
 - Sintoma: `PermissionError` por fullscreen/consentimento.
-- Ação: revisar parâmetros de CLI e política em `policy.py`.
+- Acao: revisar parametros de CLI e politica em `agentsight/policy.py`.
 
 ## Falha comum: validação parcial
 - Atualizar `reports/last-validation.md` com motivo real e classificar status.
-

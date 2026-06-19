@@ -16,8 +16,8 @@ Qualidade de codigo, testes unitarios, gates de contexto e validacao operacional
 
 - `ruff check .`
 - `python -m pytest`
-- `python -m advanced_screenshot_agent.cli --help`
-- `screenshot-agent --help`
+- `python -m agentsight.cli --help`
+- `agentsight --help`
 - `.github/scripts/context/validate-context.ps1`
 - `.github/scripts/context/validate-context.sh` quando Bash estiver disponivel.
 

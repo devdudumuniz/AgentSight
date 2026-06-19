@@ -4,10 +4,10 @@
 
 - Nao permitir fullscreen por padrao.
 - Nao capturar sem consentimento quando `require_user_consent=True`.
-- Nao tratar fallback `placeholder` como captura real.
+- Nao criar placeholder automatico quando captura real falhar.
+- Nao permitir mock sem flag explicita `--mock`.
 - Nao remover metadata com `sha256` e `timestamp_utc`.
-- Nao aceitar `redaction_regions` quando `redact=False`.
-- Nao remover metadata `redact_applied` e `redaction_regions_count`.
+- Nao remover schema `agentsight.capture.v1`.
 - Nao criar mais de um `*.agent.md` executavel.
 - Nao usar `.github/context/archive/` como fonte ativa.
 - Nao deixar `validate-context` passar com hot memory incompleta.
@@ -18,5 +18,7 @@
 - `.github/scripts/context/validate-context.sh`
 - `ruff check .`
 - `python -m pytest`
-- `python -m advanced_screenshot_agent.cli --help`
-- `screenshot-agent --help`
+- `python -m build`
+- `python -m agentsight.cli --help`
+- `agentsight --help`
+- `agentsight doctor`

@@ -4,8 +4,8 @@
 Runtime de visão para agentes com captura e relato de evidência.
 
 ## Fontes relacionadas
-- `advanced_screenshot_agent/cli.py`
-- `advanced_screenshot_agent/adapters/playwright.py`
+- `agentsight/cli.py`
+- `agentsight/adapters/playwright.py`
 - `docs/codex-continuation-prompt.md`
 
 ## Fatos confirmados
@@ -16,4 +16,3 @@ Runtime de visão para agentes com captura e relato de evidência.
 
 ## Decisões existentes
 - Centralizar evolução via roadmap.
-

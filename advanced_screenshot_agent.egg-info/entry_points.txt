@@ -1,2 +1,0 @@
-[console_scripts]
-screenshot-agent = advanced_screenshot_agent.cli:main

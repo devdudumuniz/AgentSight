@@ -1,8 +1,8 @@
-# Card de fonte: advanced_screenshot_agent
+# Card de fonte: agentsight
 
 - titulo: Código runtime do AgentSight
 - tipo: Código
-- localizacao: `advanced_screenshot_agent/`
+- localizacao: `agentsight/`
 - resumo executivo: Implementa CLI, captura, policy gate, redaction regional em memoria, redaction textual auxiliar, criptografia auxiliar, evidencias e adapter Playwright minimo.
 - conceitos-chave: consentimento, fullscreen bloqueado, metadata JSON, sha256, redaction regional, EvidenceRun.
 - pontos críticos: `capture.py` pode marcar backend `placeholder` em ambiente sem display; isso precisa ser tratado como evidencia de ambiente, nao captura real.

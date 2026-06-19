@@ -8,4 +8,3 @@ type: Research
 - conceitos-chave: screenshot + LLM loop, riscos de persistência visual, necessidade de agent-safe protocol.
 - módulos: arquitetura do produto, segurança operacional.
 - limitações: não implementa métricas quantitativas no código atual.
-

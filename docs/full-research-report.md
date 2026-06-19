@@ -1,4 +1,4 @@
-# Full Research Report — Advanced Screenshot Agent
+# Full Research Report — AgentSight
 
 ## Síntese
 

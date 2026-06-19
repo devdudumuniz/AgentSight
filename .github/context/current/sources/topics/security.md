@@ -5,7 +5,7 @@ Security-by-default com política explícita antes da captura.
 
 ## Fontes relacionadas
 - `docs/privacy-threat-model.md`
-- `advanced_screenshot_agent/policy.py`
+- `agentsight/policy.py`
 
 ## Fatos confirmados
 - O projeto exige consentimento por padrão.
@@ -19,4 +19,3 @@ Security-by-default com política explícita antes da captura.
 
 ## Dúvidas abertas
 - PII por OCR ainda não integrado ao fluxo padrão.
-

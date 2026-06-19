@@ -1,46 +1,40 @@
-# Roadmap
+# AgentSight Roadmap
 
-## Fase 0 — Base auditável
+## v0.1 Functional Runtime
 
-- CLI funcional.
-- Policy gate.
-- Captura local.
-- Metadados JSON.
-- Testes unitários.
-- CI honesto.
+- Policy gate with consent and fullscreen denial by default.
+- Region capture through `mss`.
+- Explicit mock capture for CI and docs.
+- Local region redaction.
+- Evidence JSONL and manifest.
+- Markdown report.
+- Cleanup with retention.
+- CI with lint, tests, build and CLI smoke.
 
-## Fase 1 — Web agent mode
+## v0.2 Browser And Playwright
 
-- Adapter Playwright completo.
-- Captura por elemento.
-- Before/after action hooks.
-- Relatório Markdown com comparação por fluxo.
+- Locator capture.
+- Before/after capture flows.
+- Browser page policy scopes.
+- Example projects for React, Next.js and Electron.
 
-## Fase 2 — Vision Evidence Graph
+## v0.3 OCR And Local Semantic Vision
 
-- Registro encadeado por hash.
-- Timeline por sessão.
-- Exportação SARIF/JSONL.
-- Integração com PR review.
+- Optional OCR.
+- Local sensitive-region suggestions.
+- Redaction precision/recall tests.
+- Prompt-injection visual markers.
 
-## Fase 3 — Privacy layer avançada
+## v0.4 MCP And Server Mode
 
-- OCR opcional.
-- Redaction por região detectada.
-- Criptografia por projeto.
-- TTL com cleanup assinado.
+- MCP server wrapper.
+- Agent tool protocol.
+- Local evidence API.
 
-## Fase 4 — Autonomia controlada
+## v1.0 Enterprise Readiness
 
-- Agent loop com políticas.
-- Human approval gates.
-- Simulador de clique.
-- Replay determinístico de ações.
-
-## Fase 5 — Diferencial GitHub
-
-- Badges.
-- Demo GIF.
-- Benchmark público.
-- Examples com React, Next.js, Electron e desktop.
-- Comparativo contra screenshot simples, Playwright puro e skills de Claude.
+- Policy profiles.
+- Encrypted evidence store.
+- Signed cleanup manifests.
+- Audit exports.
+- Enterprise documentation and hardening.

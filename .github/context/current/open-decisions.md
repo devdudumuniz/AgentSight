@@ -2,7 +2,7 @@
 
 ## Produto
 
-- Definir se o nome publico final sera `advanced-screenshot-agent` ou `AgentSight`.
+- Definir se o nome publico final sera `agentsight` ou `AgentSight`.
 - Definir politica de release inicial e criterios de beta.
 - Definir formato final do Vision Evidence Graph: JSON, JSONL, SARIF ou combinacao.
 

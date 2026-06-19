@@ -9,4 +9,3 @@ Registra execução de eventos de evidência em `evidence-run.json`.
 ## Limitações atuais
 - Estrutura simples, sem cadeia criptográfica de integridade.
 - Não integra TTL ou retenção automática de registros.
-

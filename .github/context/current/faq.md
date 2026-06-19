@@ -11,4 +11,3 @@ Há workflow, porém o diretório de trabalho definido está obsoleto para a rai
 
 ## Quais arquivos devem ser considerados fonte ativa?
 Tudo em `.github/context/current/`.
-

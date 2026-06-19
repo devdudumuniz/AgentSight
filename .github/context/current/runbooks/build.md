@@ -11,4 +11,3 @@ Assegurar integridade mínima do projeto após mudança.
 ## Critérios de aceitação
 - Sem falhas de lint e testes.
 - Relatar saída completa em `reports/last-validation.md`.
-

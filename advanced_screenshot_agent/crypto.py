@@ -1,22 +1,11 @@
 from __future__ import annotations
 
-from pathlib import Path
+import warnings
 
-from cryptography.fernet import Fernet
+warnings.warn(
+    "advanced_screenshot_agent.crypto is deprecated; use agentsight.crypto instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
 
-
-def generate_key() -> bytes:
-    return Fernet.generate_key()
-
-
-def encrypt_file(path: Path, key: bytes, output_path: Path | None = None) -> Path:
-    output_path = output_path or path.with_suffix(path.suffix + ".enc")
-    data = path.read_bytes()
-    output_path.write_bytes(Fernet(key).encrypt(data))
-    return output_path
-
-
-def decrypt_file(path: Path, key: bytes, output_path: Path) -> Path:
-    data = path.read_bytes()
-    output_path.write_bytes(Fernet(key).decrypt(data))
-    return output_path
+from agentsight.crypto import *  # noqa: E402,F403

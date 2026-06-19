@@ -2,9 +2,9 @@
 
 ## Alta prioridade
 
-- Implementar cleanup de retencao com TTL auditavel.
-- Completar adapter Playwright com captura por locator e hooks before/after.
 - Implementar OCR/classificacao para sugerir regioes sensiveis antes de persistencia.
+- Criar profiles de politica versionados para empresas.
+- Validar browser real em ambiente dedicado fora do CI unitario.
 
 ## Media prioridade
 

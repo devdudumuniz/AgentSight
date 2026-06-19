@@ -4,10 +4,12 @@
 
 ```powershell
 python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev,capture]"
 ruff check .
 python -m pytest
-python -m advanced_screenshot_agent.cli --help
-screenshot-agent --help
+python -m agentsight.cli --help
+agentsight --help
+agentsight doctor
 .github/scripts/context/validate-context.ps1
 ```
 

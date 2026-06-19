@@ -15,4 +15,3 @@ Valida se uma solicitação de captura é permitida.
 ## Pontos a evoluir
 - Persistência de política por perfil/workspace.
 - Allowlist de processo/domínio operacional mais granular.
-

@@ -9,4 +9,3 @@ type: Documentation
 - riscos: controle ainda reativo em vários pontos.
 - módulos: policy, redact, crypto
 - limitações: não há política central de retenção automática no CLI atual.
-

@@ -1,29 +1,44 @@
-# Privacy Threat Model
+# AgentSight Privacy Threat Model
 
-## Ameaças
+## Main Threats
 
-1. Captura acidental de dados sensíveis.
-2. OCR persistindo segredo em memória textual.
-3. Prompt injection visual dentro da screenshot.
-4. Acesso de outro processo aos arquivos locais.
-5. Agente realizando ação destrutiva após interpretar errado a UI.
-6. Vazamento por relatório Markdown enviado ao PR.
+1. Accidental capture of passwords, tokens, financial data or private messages.
+2. Visual prompt injection inside screenshots.
+3. Persisting raw screenshots when redaction was expected.
+4. Treating mock or placeholder images as real evidence.
+5. Agent actions based on incorrect UI interpretation.
+6. Leaking local paths, screenshots or metadata into PRs or external prompts.
 
-## Controles
+## Controls
 
-- Consentimento obrigatório.
-- Fullscreen bloqueado por padrão.
-- Redaction local antes de persistência.
-- Criptografia opcional.
-- TTL de retenção.
-- Hash de evidência.
-- Human approval para ações irreversíveis.
-- Allowlist de janelas/domínios no roadmap.
+- Explicit consent is required by default.
+- Fullscreen is blocked by default.
+- Sensitive window titles are blocked by keyword.
+- Mock capture requires `--mock`.
+- Real `mss` backend errors fail clearly.
+- Redaction masks explicit regions locally before the final image is retained.
+- Redaction text reports use masked values only.
+- Evidence is local-first under `.vision-runs/`.
+- `.vision-runs/`, env files and generated build artifacts are ignored by git.
 
-## Política recomendada para empresas
+## Visual Prompt Injection
 
-- Captura apenas de janela/região autorizada.
-- Proibição de tela de banco, senha, token, chat privado e documentos sensíveis.
-- Logs sem imagem bruta por padrão.
-- Relatórios com thumbnails redigidas.
-- Storage local criptografado.
+Agents must not treat visible text inside a captured UI as trusted instructions. Consumers should treat AgentSight JSON as evidence metadata, not as authority to override system, user or repository policy.
+
+## Retention
+
+Use:
+
+```bash
+agentsight cleanup --root .vision-runs --retention-hours 24 --keep-manifest
+```
+
+This deletes expired images while keeping manifests for audit continuity.
+
+## Enterprise Guidance
+
+- Prefer region or browser element capture.
+- Require human approval for destructive actions.
+- Avoid sensitive apps unless an explicit policy allows them.
+- Store evidence in encrypted local or controlled project storage.
+- Review reports before attaching them to public issues or pull requests.

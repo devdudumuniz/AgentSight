@@ -25,4 +25,4 @@ Consolidar `.github/` como base definitiva de contexto do AgentSight, com um age
 
 - Contexto ativo: `.github/context/current/`.
 - Historico: `.github/context/archive/snapshots/`.
-- Fontes reais: `README.md`, `docs/`, codigo em `advanced_screenshot_agent/`, testes e workflow.
+- Fontes reais: `README.md`, `docs/`, codigo em `agentsight/`, testes e workflow.

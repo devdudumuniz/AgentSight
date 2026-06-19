@@ -9,4 +9,3 @@ type: Research
 - riscos: sem benchmark quantitativo implementado ainda.
 - módulos: agent-runtime
 - limitações: material de pesquisa sem tradução direta para métricas internas.
-

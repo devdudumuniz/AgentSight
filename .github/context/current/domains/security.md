@@ -4,7 +4,7 @@
 Controlar escopo, consentimento e tratamento de dados sensíveis durante captura.
 
 ## Fontes
-- `advanced_screenshot_agent/policy.py`
+- `agentsight/policy.py`
 - `docs/privacy-threat-model.md`
 - `README.md`
 
@@ -12,4 +12,3 @@ Controlar escopo, consentimento e tratamento de dados sensíveis durante captura
 - Fullscreen bloqueado por padrão (`allow_fullscreen=False`).
 - Consentimento explícito obrigatório (`require_user_consent=True`).
 - Redaction e mascaramento antes de persistir/compartilhar quando aplicável.
-

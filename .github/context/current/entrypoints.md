@@ -1,13 +1,13 @@
 # Entry points reais
 
-- CLI principal: `screenshot-agent`
-  - Script: `advanced_screenshot_agent.cli:main`
+- CLI principal: `agentsight`
+  - Script: `agentsight.cli:main`
   - Configurado em `pyproject.toml` (`[project.scripts]`)
 
 - Entrada Python direta:
-  - `python -m advanced_screenshot_agent.cli ...` (uso local)
+  - `python -m agentsight.cli ...` (uso local)
 
-## Observação
+## Alias legado
 
-- O workflow atual `.github/workflows/ci.yml` não está alinhado ao caminho da raiz atual (`working-directory` aponta para pasta inexistente para este repo).  
-
+- `screenshot-agent` aponta para `agentsight.cli:main` apenas por compatibilidade temporaria.
+- Novos comandos devem usar `agentsight`.

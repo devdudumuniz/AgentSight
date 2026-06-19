@@ -12,4 +12,3 @@ Definir `.github/context/current/` como fonte ativa única e `.github/context/ar
 ## Consequências
 - Redução de ambiguidades de leitura.
 - Maior rastreabilidade de mudanças em `changelog` e `reports`.
-

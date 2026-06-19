@@ -9,4 +9,3 @@ type: Documentation
 - riscos: evidência ainda não encadeada por hash; retenção central ainda parcial.
 - módulos: capture, policy, evidence, redact
 - limitações: decisão de evolução (ex: Playwright completo, retention robusta) descrita parcialmente.
-

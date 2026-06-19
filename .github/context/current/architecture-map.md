@@ -3,7 +3,7 @@
 ## Camadas
 
 - `Entrada / Interface`:
-  - CLI (`advanced_screenshot_agent/cli.py`) com comandos `capture`, `report`.
+  - CLI (`agentsight/cli.py`) com comandos `capture`, `report`.
 - `Domínio de captura`:
   - `capture.py` (orquestra captura e metadados),
   - `policy.py` (governança de segurança),
