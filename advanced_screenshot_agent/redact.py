@@ -21,6 +21,9 @@ class RedactionHit:
     text: str
 
 
+Region = tuple[int, int, int, int]
+
+
 def detect_sensitive_text(text: str) -> list[RedactionHit]:
     hits: list[RedactionHit] = []
     for kind, pattern in SENSITIVE_PATTERNS.items():
@@ -29,9 +32,31 @@ def detect_sensitive_text(text: str) -> list[RedactionHit]:
     return hits
 
 
+def _validate_region(region: Region, image_width: int, image_height: int) -> None:
+    x, y, width, height = region
+    if min(x, y, width, height) < 0 or width == 0 or height == 0:
+        raise ValueError("Regiao invalida para redaction.")
+    if x + width > image_width or y + height > image_height:
+        raise ValueError("Regiao de redaction fora dos limites da imagem.")
+
+
+def redact_image_regions(image: Image.Image, regions: list[Region] | tuple[Region, ...]) -> Image.Image:
+    """Aplica blur em memoria, antes de persistir a imagem final."""
+    redacted = image.convert("RGB").copy()
+
+    for region in regions:
+        _validate_region(region, redacted.width, redacted.height)
+        x, y, width, height = region
+        box = (x, y, x + width, y + height)
+        crop = redacted.crop(box).filter(ImageFilter.GaussianBlur(radius=18))
+        redacted.paste(crop, box)
+
+    return redacted
+
+
 def redact_regions(
     image_path: Path,
-    regions: list[tuple[int, int, int, int]],
+    regions: list[Region],
     output_path: Path | None = None,
 ) -> Path:
     """Aplica blur em regiões específicas da imagem.
@@ -40,11 +65,5 @@ def redact_regions(
     """
     output_path = output_path or image_path.with_name(f"{image_path.stem}.redacted{image_path.suffix}")
     img = Image.open(image_path).convert("RGB")
-
-    for x, y, width, height in regions:
-        box = (x, y, x + width, y + height)
-        crop = img.crop(box).filter(ImageFilter.GaussianBlur(radius=18))
-        img.paste(crop, box)
-
-    img.save(output_path)
+    redact_image_regions(img, regions).save(output_path)
     return output_path

@@ -60,7 +60,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
 
-screenshot-agent capture --label home-screen --output .vision-runs/demo
+screenshot-agent capture --label home-screen --output .vision-runs/demo --consent --region 100,100,800,600
 screenshot-agent report --run .vision-runs/demo
 ```
 
@@ -70,7 +70,13 @@ No Windows:
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
-screenshot-agent capture --label home-screen --output .vision-runs/demo
+screenshot-agent capture --label home-screen --output .vision-runs/demo --consent --region 100,100,800,600
+```
+
+Captura por região com redaction local antes de salvar:
+
+```powershell
+screenshot-agent capture --label checkout --output .vision-runs/demo --consent --region 100,100,800,600 --redact-region 20,20,240,80
 ```
 
 ## Status

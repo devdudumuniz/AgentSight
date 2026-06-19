@@ -1,7 +1,7 @@
 # Módulo: capture
 
 ## O que faz
-Captura imagem e gera metadados (`label`, `sha256`, `timestamp`, `path`, backend usado).
+Captura imagem, aplica redaction regional quando informada e gera metadados (`label`, `sha256`, `timestamp`, `path`, backend usado, redaction aplicada).
 
 ## Entrada principal
 - `advanced_screenshot_agent.capture.capture_screen`
@@ -12,5 +12,5 @@ Captura imagem e gera metadados (`label`, `sha256`, `timestamp`, `path`, backend
 ## Regras e riscos
 - Validação via `CapturePolicy` antes de capturar.
 - Em ambiente sem display, usa placeholder para manter robustez de execução.
-- Falta de redaction automática no fluxo atual por padrão (`capture` apenas gera imagem + metadata).
-
+- Redaction por regiões é aplicada em memória antes de salvar quando `redaction_regions` é informado.
+- OCR/redaction automática por conteúdo ainda não faz parte do fluxo padrão.

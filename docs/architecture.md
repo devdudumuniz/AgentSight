@@ -20,7 +20,7 @@ A ferramenta não deve ser “mais um printscreen com IA”. Ela deve ser uma ca
 3. **Local redaction**
    - Extrai sinais textuais.
    - Detecta padrões sensíveis.
-   - Borra regiões antes de persistir ou enviar para LLM.
+   - Borra regiões em memória antes de persistir a imagem final quando `redaction_regions` é informado.
 
 4. **Evidence graph**
    - Registra imagem, hash, ação, timestamp e política usada.

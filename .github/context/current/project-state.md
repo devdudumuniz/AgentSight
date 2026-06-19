@@ -22,13 +22,15 @@
 - CLI publica `screenshot-agent` com comandos `capture` e `report`.
 - `capture` exige consentimento por politica padrao.
 - Captura fullscreen permanece bloqueada por padrao.
-- Redaction por texto e blur regional existem como modulo separado.
+- `capture` aceita `--region`, `--redact-region` e `--no-redact`.
+- Redaction regional pode ser aplicada em memoria antes de salvar a imagem final.
+- Redaction textual por regex existe como detector auxiliar; OCR/classificacao automatica ainda nao estao no fluxo padrao.
 - Evidence graph existe em formato basico via `EvidenceRun` e `EvidenceEvent`.
 
 ## Inferencias
 
 - O projeto esta em fase base auditavel, antes de release publico.
-- A prioridade tecnica seguinte e fechar lacunas entre captura, redaction, retencao e adapter Playwright.
+- A prioridade tecnica seguinte e fechar lacunas de retencao, OCR/classificacao sensivel e adapter Playwright.
 
 ## Bloqueios atuais
 

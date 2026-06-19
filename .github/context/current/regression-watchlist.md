@@ -6,6 +6,8 @@
 - Nao capturar sem consentimento quando `require_user_consent=True`.
 - Nao tratar fallback `placeholder` como captura real.
 - Nao remover metadata com `sha256` e `timestamp_utc`.
+- Nao aceitar `redaction_regions` quando `redact=False`.
+- Nao remover metadata `redact_applied` e `redaction_regions_count`.
 - Nao criar mais de um `*.agent.md` executavel.
 - Nao usar `.github/context/archive/` como fonte ativa.
 - Nao deixar `validate-context` passar com hot memory incompleta.

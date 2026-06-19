@@ -1,5 +1,12 @@
 # Changelog de contexto
 
+## 2026-06-19 - redaction integrada
+- `capture` passou a suportar `--region`, `--redact-region` e `--no-redact`.
+- Redaction regional agora e aplicada em memoria antes de salvar a imagem final quando regioes sao informadas.
+- Metadata de captura registra `redact_applied`, `redaction_regions` e `redaction_regions_count`.
+- Testes de regressao adicionados para redaction integrada, conflito `redact=False` com regioes e CLI help.
+- README, roadmap, contexto de modulo e riscos atualizados para refletir o estado real.
+
 ## 2026-06-19
 - Completada a estrutura obrigatoria do agente de contexto conforme prompt mestre v2.
 - `main.agent.md` endurecido como unico agente executavel, com hot/warm/cold memory, evidence layer, estados oficiais, criterios de qualidade, parada, rollback e checklist minimo.

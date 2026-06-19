@@ -3,7 +3,7 @@
 ## Produto e seguranca
 
 - Captura visual pode expor dados sensiveis se usada fora das politicas de consentimento, janela/regiao e redaction.
-- Redaction automatica ainda nao esta acoplada ao fluxo principal de `capture`.
+- Redaction regional esta integrada ao fluxo de `capture`, mas depende de regioes explicitas informadas pelo operador/agente.
 - OCR e classificacao visual sensivel ainda sao opcionais/futuros.
 - Retencao/cleanup ainda nao esta implementada como comando operacional do CLI.
 

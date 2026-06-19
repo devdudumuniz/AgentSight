@@ -2,9 +2,9 @@
 
 ## Alta prioridade
 
-- Integrar redaction ao fluxo de captura antes de exportar relatorios em cenarios sensiveis.
 - Implementar cleanup de retencao com TTL auditavel.
 - Completar adapter Playwright com captura por locator e hooks before/after.
+- Implementar OCR/classificacao para sugerir regioes sensiveis antes de persistencia.
 
 ## Media prioridade
 

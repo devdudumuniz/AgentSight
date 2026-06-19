@@ -10,6 +10,7 @@ from typing import Any
 from PIL import Image
 
 from .policy import CapturePolicy
+from .redact import Region, redact_image_regions
 
 
 @dataclass(frozen=True)
@@ -17,6 +18,7 @@ class CaptureConfig:
     label: str
     output_dir: Path
     region: tuple[int, int, int, int] | None = None
+    redaction_regions: tuple[Region, ...] = ()
     fullscreen: bool = False
     window_title: str | None = None
     consent: bool = False
@@ -57,6 +59,9 @@ def capture_screen(config: CaptureConfig, policy: CapturePolicy | None = None) -
             "Use --fullscreen ou informe uma região."
         )
 
+    if config.redaction_regions and not config.redact:
+        raise ValueError("Regioes de redaction foram informadas, mas redaction esta desativada.")
+
     config.output_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     basename = f"{timestamp}-{_slugify(config.label)}"
@@ -81,7 +86,12 @@ def capture_screen(config: CaptureConfig, policy: CapturePolicy | None = None) -
         capture_backend = "placeholder"
         capture_error = str(exc)
         img = Image.new("RGB", (1280, 720), color=(245, 245, 245))
-        img.save(image_path)
+
+    redact_applied = bool(config.redact and config.redaction_regions)
+    if redact_applied:
+        img = redact_image_regions(img, config.redaction_regions)
+
+    img.save(image_path)
 
     metadata = {
         "label": config.label,
@@ -92,6 +102,9 @@ def capture_screen(config: CaptureConfig, policy: CapturePolicy | None = None) -
         "fullscreen": config.fullscreen,
         "window_title": config.window_title,
         "redact_requested": config.redact,
+        "redact_applied": redact_applied,
+        "redaction_regions": [list(region) for region in config.redaction_regions],
+        "redaction_regions_count": len(config.redaction_regions),
         "capture_backend": capture_backend,
         "capture_error": capture_error,
     }
