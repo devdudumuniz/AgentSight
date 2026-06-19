@@ -1,5 +1,18 @@
 # Changelog de contexto
 
+## 2026-06-19
+- Completada a estrutura obrigatoria do agente de contexto conforme prompt mestre v2.
+- `main.agent.md` endurecido como unico agente executavel, com hot/warm/cold memory, evidence layer, estados oficiais, criterios de qualidade, parada, rollback e checklist minimo.
+- Adicionados arquivos hot obrigatorios ausentes: `project-state.md`, `active-scope.md` e `known-risks.md`.
+- Adicionados controles de governanca em `technical-debt.md`, `regression-watchlist.md`, `open-decisions.md`, `non-goals.md` e `ADR-0003-governance-model.md`.
+- Adicionados runbook de testes, dominios de QA/observabilidade/infra e perfis de coordenacao, desenvolvimento, QA, docs e seguranca.
+- Criadas instrucoes faltantes: `context-loading`, `execution`, `documentation` e `validation`.
+- Criado `docs-sync.prompt.md`.
+- Criadas skills operacionais: `context-refresh`, `context-audit`, `source-deep-dive`, `regression-recovery`, `gate-validation` e `roadmap-sync`.
+- Evidence layer ampliada para registrar `pyproject.toml`, CI, codigo runtime e testes como fontes reais com cards dedicados.
+- `manifest.json` atualizado para versao `1.1.0`, representando hot/warm/cold memory, evidence layer, arquivos e diretorios obrigatorios.
+- `validate-context.ps1` e `validate-context.sh` endurecidos para validar manifesto, hot memory, diretorios obrigatorios, agente unico e proibicao de `archive/latest`.
+
 ## 2026-06-18
 - Estrutura completa de agente de contexto implantada em `.github`.
 - Adicionado agente principal único: `.github/agents/main.agent.md`.

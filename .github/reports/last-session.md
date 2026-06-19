@@ -1,7 +1,9 @@
 # Last Session
 
-- data: 2026-06-18
+- data: 2026-06-19
 - status: READY_FOR_REVIEW
-- foco: consolidar o sistema de contexto canônico e corrigir inconsistências de raiz/CLI
-- mudanças: removido agente legado, corrigidos caminhos de fonte, alinhado CI ao root real, corrigido `python -m advanced_screenshot_agent.cli`, adicionada regressão e criado snapshot final `20260618T190930Z`
-- próximos: opcionalmente enriquecer a camada de fontes com cards adicionais de código e workflow
+- foco: completar e endurecer a base `.github/` como sistema canonico de contexto do AgentSight
+- mudancas: agente principal reescrito, hot memory obrigatoria completada, skills/prompts/instrucoes adicionados, manifesto elevado para `1.1.0`, validadores de contexto endurecidos
+- fontes: `README.md`, `pyproject.toml`, `docs/`, `advanced_screenshot_agent/`, `tests/`, `.github/workflows/ci.yml`
+- riscos registrados: redaction ainda nao acoplada ao `capture`, retention cleanup pendente, fallback `placeholder` nao deve ser tratado como evidencia visual real
+- proximos: implementar redaction integrada ao fluxo de captura, retention cleanup e adapter Playwright completo

@@ -1,6 +1,6 @@
 param(
   [string]$ContextPath = ".github/context",
-  [string]$Version = "1.0.0"
+  [string]$Version = "1.1.0"
 )
 
 $manifest = Join-Path $ContextPath "manifest.json"
@@ -13,3 +13,4 @@ $data.integrityStatus = "ACTIVE"
 $data | ConvertTo-Json -Depth 10 | Set-Content $manifest -Encoding UTF8
 Add-Content -Path (Join-Path $ContextPath "changelog.md") -Value "- refresh-context executado em $(Get-Date -Format yyyy-MM-dd)"
 
+& ".github/scripts/context/validate-context.ps1" | Out-Null

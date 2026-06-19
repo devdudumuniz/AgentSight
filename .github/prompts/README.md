@@ -7,5 +7,5 @@ Prompts reutilizáveis para fluxos recorrentes.
 - `recover-from-regression.prompt.md`
 - `check-gates.prompt.md`
 - `deep-dive-topic.prompt.md`
+- `docs-sync.prompt.md`
 - `sources-sync.prompt.md`
-

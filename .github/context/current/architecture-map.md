@@ -21,6 +21,5 @@
 
 ## Riscos arquitetônicos
 - Persistência local sem política única de retenção no CLI atual.
-- CI legado com path incorreto.
 - Integrações de segurança dependem de políticas manuais e não de profile central dinâmico.
-
+- O fallback `placeholder` em ambiente sem display precisa permanecer claramente marcado para não virar evidência visual real.

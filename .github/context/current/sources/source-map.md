@@ -7,4 +7,7 @@
 | `README.md` | projeto | geral | - | - | visão |
 | `docs/full-research-report.md` | produto | roadmap | - | - | diferenciais |
 | `docs/roadmap.md` | produto | roadmap | - | - | planejamento |
-
+| `pyproject.toml` | qa/infra | package | - | build/test | build, dependências, entrypoint |
+| `advanced_screenshot_agent/` | agent-runtime/security | capture/policy/evidence/redaction | - | troubleshooting | implementação real |
+| `tests/` | qa | capture/policy/evidence/redaction | - | test | regressões |
+| `.github/workflows/ci.yml` | qa/infra | package | - | test | automação CI |
